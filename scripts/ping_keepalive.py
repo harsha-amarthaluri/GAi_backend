@@ -14,7 +14,7 @@ import urllib.request
 import urllib.error
 
 DEFAULT_INTERVAL_SECONDS = 840  # 14 minutes
-DEFAULT_URL = os.environ.get("RENDER_BACKEND_URL", "http://localhost:8000/health")
+DEFAULT_URL = os.environ.get("RENDER_BACKEND_URL", "https://gai-backend-ylzf.onrender.com/health")
 
 def ping(url: str) -> bool:
     """Send HTTP GET request to health endpoint and print status."""

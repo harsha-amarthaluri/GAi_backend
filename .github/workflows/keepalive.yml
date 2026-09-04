@@ -15,7 +15,7 @@ jobs:
         run: |
           URL="${{ secrets.RENDER_BACKEND_URL }}"
           if [ -z "$URL" ]; then
-            URL="https://guardian-ai-backend.onrender.com/health"
+            URL="https://gai-backend-ylzf.onrender.com/health"
           fi
           echo "Pinging health endpoint: $URL"
           HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}" --max-time 30 "$URL")
