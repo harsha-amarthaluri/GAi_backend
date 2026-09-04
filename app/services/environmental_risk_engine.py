@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 from typing import List
-from backend.app.schemas.weather import WeatherDataResponse, EnvironmentalRiskResponse, EnvironmentalRiskFactor
+from app.schemas.weather import WeatherDataResponse, EnvironmentalRiskResponse, EnvironmentalRiskFactor
 
 class EnvironmentalRiskEngine:
     """

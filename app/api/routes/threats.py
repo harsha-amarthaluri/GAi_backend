@@ -2,11 +2,11 @@ from typing import Optional
 from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy.orm import Session
 
-from backend.app.db.database import get_db
-from backend.app.db.models.user import User
-from backend.app.dependencies.auth import get_current_user
-from backend.app.schemas.threat import ThreatCreate, ThreatResponse, ThreatListResponse
-from backend.app.services.threat_service import ThreatService
+from app.db.database import get_db
+from app.db.models.user import User
+from app.dependencies.auth import get_current_user
+from app.schemas.threat import ThreatCreate, ThreatResponse, ThreatListResponse
+from app.services.threat_service import ThreatService
 
 router = APIRouter()
 

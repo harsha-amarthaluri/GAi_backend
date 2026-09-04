@@ -1,7 +1,7 @@
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from backend.app.repositories.threat_repository import ThreatRepository
-from backend.app.schemas.threat import ThreatCreate, ThreatResponse, ThreatListResponse
+from app.repositories.threat_repository import ThreatRepository
+from app.schemas.threat import ThreatCreate, ThreatResponse, ThreatListResponse
 
 class ThreatService:
     def __init__(self, db: Session):

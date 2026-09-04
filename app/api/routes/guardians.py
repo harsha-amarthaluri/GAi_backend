@@ -2,11 +2,11 @@ from typing import List
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
-from backend.app.db.database import get_db
-from backend.app.db.models.user import User
-from backend.app.dependencies.auth import get_current_user
-from backend.app.schemas.guardian import GuardianCreateRequest, GuardianUpdateRequest, GuardianResponse
-from backend.app.services.guardian_service import GuardianService
+from app.db.database import get_db
+from app.db.models.user import User
+from app.dependencies.auth import get_current_user
+from app.schemas.guardian import GuardianCreateRequest, GuardianUpdateRequest, GuardianResponse
+from app.services.guardian_service import GuardianService
 
 router = APIRouter()
 

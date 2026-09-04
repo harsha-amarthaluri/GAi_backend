@@ -1,6 +1,6 @@
 import logging
 from typing import List, Dict, Any
-from backend.app.schemas.sos import SOSResponse
+from app.schemas.sos import SOSResponse
 
 logger = logging.getLogger("guardian_ai")
 

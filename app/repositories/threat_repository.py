@@ -1,8 +1,8 @@
 import math
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from backend.app.db.models.threat import Threat
-from backend.app.schemas.threat import ThreatCreate
+from app.db.models.threat import Threat
+from app.schemas.threat import ThreatCreate
 
 class ThreatRepository:
     def __init__(self, db: Session):

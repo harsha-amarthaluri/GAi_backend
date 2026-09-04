@@ -1,10 +1,10 @@
 from datetime import datetime, timezone
 from typing import Optional
 from sqlalchemy.orm import Session
-from backend.app.schemas.safety import SafetyScoreResponse, LocationPoint, FactorDetail
-from backend.app.repositories.threat_repository import ThreatRepository
-from backend.app.services.weather_service import WeatherService
-from backend.app.services.environmental_risk_engine import EnvironmentalRiskEngine
+from app.schemas.safety import SafetyScoreResponse, LocationPoint, FactorDetail
+from app.repositories.threat_repository import ThreatRepository
+from app.services.weather_service import WeatherService
+from app.services.environmental_risk_engine import EnvironmentalRiskEngine
 
 class SafetyScoreService:
     """

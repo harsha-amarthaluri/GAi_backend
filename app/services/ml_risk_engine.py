@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 import math
 from typing import Dict, List, Optional
 from sqlalchemy.orm import Session
-from backend.app.repositories.threat_repository import ThreatRepository
+from app.repositories.threat_repository import ThreatRepository
 
 class MLRiskEngine:
     """

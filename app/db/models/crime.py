@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 from sqlalchemy import Column, String, Float, DateTime, Integer
-from backend.app.db.database import Base
+from app.db.database import Base
 
 class CrimeData(Base):
     __tablename__ = "crime_data"

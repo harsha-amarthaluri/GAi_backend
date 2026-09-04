@@ -1,8 +1,8 @@
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
-from backend.app.db.models.user import User
-from backend.app.repositories.user_repository import UserRepository
-from backend.app.schemas.user import UserResponse, UserUpdateRequest
+from app.db.models.user import User
+from app.repositories.user_repository import UserRepository
+from app.schemas.user import UserResponse, UserUpdateRequest
 
 class UserService:
     def __init__(self, db: Session):

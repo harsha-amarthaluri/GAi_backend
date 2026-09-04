@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 from sqlalchemy import Column, String, Float, DateTime, ForeignKey, Integer, JSON
 from sqlalchemy.orm import relationship as rel
-from backend.app.db.database import Base
+from app.db.database import Base
 
 class SafetyScore(Base):
     __tablename__ = "safety_scores"

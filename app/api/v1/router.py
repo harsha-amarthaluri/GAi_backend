@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from backend.app.api.routes import auth, users, guardians, locations, safety, sos, health, threats, weather
+from app.api.routes import auth, users, guardians, locations, safety, sos, health, threats, weather
 
 api_router = APIRouter()
 

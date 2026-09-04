@@ -11,8 +11,8 @@ sys.path.insert(0, root_dir)
 sys.path.insert(0, backend_dir)
 
 try:
-    from backend.app.core.config import settings
-    from backend.app.db.models import Base
+    from app.core.config import settings
+    from app.db.models import Base
 except ModuleNotFoundError:
     from app.core.config import settings
     from app.db.models import Base

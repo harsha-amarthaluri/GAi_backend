@@ -1,0 +1,27 @@
+name: Render Backend 14-Minute Keep-Alive Cron
+
+on:
+  schedule:
+    # Runs every 14 minutes to prevent Render free tier instance sleep (15m inactivity threshold)
+    - cron: '*/14 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    name: Ping Render Health Endpoint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Keep-Alive HTTP Request
+        run: |
+          URL="${{ secrets.RENDER_BACKEND_URL }}"
+          if [ -z "$URL" ]; then
+            URL="https://guardian-ai-backend.onrender.com/health"
+          fi
+          echo "Pinging health endpoint: $URL"
+          HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}" --max-time 30 "$URL")
+          echo "HTTP Response Code: $HTTP_STATUS"
+          if [ "$HTTP_STATUS" -ne 200 ]; then
+            echo "Warning: Expected 200 OK, got $HTTP_STATUS"
+            exit 1
+          fi
+          echo "Keep-alive ping successful!"

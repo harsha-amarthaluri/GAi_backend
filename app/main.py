@@ -15,10 +15,10 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from backend.app.core.config import settings
-from backend.app.core.logging import logger
-from backend.app.api.v1.router import api_router
-from backend.app.api.routes import health
+from app.core.config import settings
+from app.core.logging import logger
+from app.api.v1.router import api_router
+from app.api.routes import health
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -68,4 +68,4 @@ async def root():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("backend.app.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)

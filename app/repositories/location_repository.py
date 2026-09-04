@@ -1,6 +1,6 @@
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from backend.app.db.models.location import Location
+from app.db.models.location import Location
 
 class LocationRepository:
     def __init__(self, db: Session):

@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy.orm import Session
 
-from backend.app.db.database import get_db
-from backend.app.db.models.user import User
-from backend.app.dependencies.auth import get_current_user
-from backend.app.schemas.sos import SOSCreateRequest, SOSResponse, SOSListResponse
-from backend.app.services.sos_service import SOSService
+from app.db.database import get_db
+from app.db.models.user import User
+from app.dependencies.auth import get_current_user
+from app.schemas.sos import SOSCreateRequest, SOSResponse, SOSListResponse
+from app.services.sos_service import SOSService
 
 router = APIRouter()
 

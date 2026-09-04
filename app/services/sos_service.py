@@ -1,11 +1,11 @@
 from typing import List, Tuple
 from sqlalchemy.orm import Session
 
-from backend.app.db.models.sos import SOSIncident
-from backend.app.repositories.sos_repository import SOSRepository
-from backend.app.repositories.guardian_repository import GuardianRepository
-from backend.app.schemas.sos import SOSCreateRequest, SOSResponse, SOSListResponse, IncidentStatusEnum
-from backend.app.services.notification_service import NotificationService
+from app.db.models.sos import SOSIncident
+from app.repositories.sos_repository import SOSRepository
+from app.repositories.guardian_repository import GuardianRepository
+from app.schemas.sos import SOSCreateRequest, SOSResponse, SOSListResponse, IncidentStatusEnum
+from app.services.notification_service import NotificationService
 
 class SOSService:
     def __init__(self, db: Session):

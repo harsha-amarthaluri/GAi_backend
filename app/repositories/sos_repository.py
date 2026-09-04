@@ -1,6 +1,6 @@
 from typing import List, Optional, Tuple
 from sqlalchemy.orm import Session
-from backend.app.db.models.sos import SOSIncident
+from app.db.models.sos import SOSIncident
 
 class SOSRepository:
     def __init__(self, db: Session):

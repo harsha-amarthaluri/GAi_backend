@@ -2,9 +2,9 @@ import math
 from datetime import datetime, timezone
 from typing import List
 from sqlalchemy.orm import Session
-from backend.app.db.models.location import Location
-from backend.app.repositories.location_repository import LocationRepository
-from backend.app.schemas.location import (
+from app.db.models.location import Location
+from app.repositories.location_repository import LocationRepository
+from app.schemas.location import (
     LocationCreateRequest,
     LocationResponse,
     LocationBatchCreateRequest,

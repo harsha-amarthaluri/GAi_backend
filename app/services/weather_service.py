@@ -5,8 +5,8 @@ import json
 from datetime import datetime, timezone
 from typing import Dict, Optional, Tuple
 
-from backend.app.core.config import settings
-from backend.app.schemas.weather import WeatherDataResponse, EnvironmentalRiskResponse, EnvironmentalRiskFactor
+from app.core.config import settings
+from app.schemas.weather import WeatherDataResponse, EnvironmentalRiskResponse, EnvironmentalRiskFactor
 
 logger = logging.getLogger("guardian_ai")
 

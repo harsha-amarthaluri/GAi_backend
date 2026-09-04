@@ -1,6 +1,6 @@
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from backend.app.db.models.guardian import Guardian
+from app.db.models.guardian import Guardian
 
 class GuardianRepository:
     def __init__(self, db: Session):

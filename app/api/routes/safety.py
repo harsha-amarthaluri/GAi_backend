@@ -2,14 +2,14 @@ from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy.orm import Session
 from typing import Dict, Any
 
-from backend.app.db.database import get_db
-from backend.app.db.models.user import User
-from backend.app.dependencies.auth import get_current_user
-from backend.app.schemas.safety import SafetyScoreResponse, SafetyScoreQuery
-from backend.app.schemas.weather import RouteAnalysisRequest, RouteAnalysisResponse
-from backend.app.services.safety_service import SafetyScoreService
-from backend.app.services.ml_risk_engine import MLRiskEngine
-from backend.app.services.route_analysis_service import RouteAnalysisService
+from app.db.database import get_db
+from app.db.models.user import User
+from app.dependencies.auth import get_current_user
+from app.schemas.safety import SafetyScoreResponse, SafetyScoreQuery
+from app.schemas.weather import RouteAnalysisRequest, RouteAnalysisResponse
+from app.services.safety_service import SafetyScoreService
+from app.services.ml_risk_engine import MLRiskEngine
+from app.services.route_analysis_service import RouteAnalysisService
 
 router = APIRouter()
 

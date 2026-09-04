@@ -1,9 +1,9 @@
 from typing import List
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
-from backend.app.db.models.guardian import Guardian
-from backend.app.repositories.guardian_repository import GuardianRepository
-from backend.app.schemas.guardian import GuardianCreateRequest, GuardianUpdateRequest, GuardianResponse
+from app.db.models.guardian import Guardian
+from app.repositories.guardian_repository import GuardianRepository
+from app.schemas.guardian import GuardianCreateRequest, GuardianUpdateRequest, GuardianResponse
 
 class GuardianService:
     def __init__(self, db: Session):

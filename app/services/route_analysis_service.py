@@ -3,8 +3,8 @@ from datetime import datetime, timezone
 from typing import List, Optional
 from sqlalchemy.orm import Session
 
-from backend.app.repositories.threat_repository import ThreatRepository
-from backend.app.schemas.weather import RouteAnalysisRequest, RouteAnalysisResponse, CorridorOption
+from app.repositories.threat_repository import ThreatRepository
+from app.schemas.weather import RouteAnalysisRequest, RouteAnalysisResponse, CorridorOption
 
 class RouteAnalysisService:
     """
