@@ -70,8 +70,8 @@ If you are creating the Web Service manually on Render via the Web Dashboard (**
 | **Branch** | `main` | The Git branch to build and deploy |
 | **Region** | `Ohio (US East)` *(or closest region)* | Server region |
 | **Root Directory** | `backend` | **Important:** Set to `backend` so Render runs commands inside the backend folder |
-| **Build Command** | `pip install -r requirements.txt && alembic upgrade head` | Installs dependencies and runs database migrations |
-| **Start Command** | `uvicorn app.main:app --host 0.0.0.0 --port $PORT` | Starts FastAPI uvicorn server listening on Render's dynamic `$PORT` |
+| **Build Command** | `pip install -r requirements.txt` | Installs Python dependencies |
+| **Start Command** | `alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT` | Runs database migrations and starts FastAPI server |
 
 ---
 
@@ -85,9 +85,12 @@ If you are creating the Web Service manually on Render via the Web Dashboard (**
    | :--- | :--- | :--- |
    | `ENVIRONMENT` | `production` | Enables production mode |
    | `SECRET_KEY` | `<your-secret-key>` | JWT signing secret key |
-   | `DATABASE_URL` | `postgresql://postgres:.%23Ccf*b%236y-Drzc@db.xdtvthdlxdpixhnsaeah.supabase.co:5432/postgres` | Supabase PostgreSQL connection URL |
+   | `DATABASE_URL` | `postgresql://postgres.xdtvthdlxdpixhnsaeah:.%23Ccf*b%236y-Drzc@aws-0-ap-south-1.pooler.supabase.com:6543/postgres` | **Must use Supabase IPv4 Pooler URL** (Port `6543`) |
 
-3. Click **Create Web Service**. Render will pull your repo, navigate into `backend/`, install dependencies, run migrations, and launch your API.
+> [!NOTE]
+> **Why IPv4 Pooler is required on Render**: Render free-tier instances do not support outbound IPv6. Direct Supabase URLs (`db.[ref].supabase.co:5432`) resolve to IPv6-only, causing `Network is unreachable` errors. The Supabase IPv4 Pooler connection string (`aws-0-[region].pooler.supabase.com:6543` with username `postgres.[project_ref]`) resolves to IPv4 and connects seamlessly.
+
+3. Click **Create Web Service**. Render will pull your repository, install dependencies, run migrations on container startup, and launch your API.
 
 ---
 
